@@ -23,7 +23,7 @@ function IncomeModal({ show, onClose }) {
             descriptionRef.current.value = ""
             amountRef.current.value = ""
         } catch (error) {
-            console.log(error.message);   
+            console.log(error.message);
         }
     }
 
@@ -87,5 +87,4 @@ function IncomeModal({ show, onClose }) {
         </Modal>
     )
 }
-
 export default IncomeModal

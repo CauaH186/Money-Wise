@@ -27,7 +27,7 @@ export default function Home() {
         return total + e.total
       }, 0)
     setBalance(newBalance)
-  }, [expenses, income ])
+  }, [expenses, income])
 
 
   return (
@@ -46,7 +46,7 @@ export default function Home() {
         {/* Income and Expense Buttons */}
         <section className="flex items-center gap-2 py-3">
           <button onClick={() => { setExpenseModal(true) }} className="btn btn-primary">Saída</button>
-          
+
           <button onClick={() => { setIncomeModal(true) }} className="btn btn-primary-outline">Entrada</button>
         </section>
 
@@ -83,8 +83,7 @@ export default function Home() {
                   backgroundColor: expenses.map(expense => expense.color),
                   borderColor: ['#18181b'],
                   borderWidth: 5,
-                }
-              ]
+                }]
             }} />
           </div>
         </section>
