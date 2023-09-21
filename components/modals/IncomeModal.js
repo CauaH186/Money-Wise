@@ -52,7 +52,7 @@ function IncomeModal({ show, onClose }) {
                 </div>
 
                 <div className='input-group'>
-                    <label htmlFor='amount'>Descrição</label>
+                    <label htmlFor='description'>Descrição</label>
                     <input
                         ref={descriptionRef}
                         name='description'

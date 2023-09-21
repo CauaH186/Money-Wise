@@ -16,7 +16,8 @@
     "react-chartjs-2": "^5.2.0",
     "react-chartkick": "^0.5.3",
     "react-dom": "18.2.0",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
