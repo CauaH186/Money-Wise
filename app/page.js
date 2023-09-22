@@ -1,10 +1,13 @@
 "use client";
 import { useState, useContext, useEffect } from 'react';
 import { financeContext } from "@/lib/store/finance-context";
-import { currencyFormatter, dateFormatter } from '@/lib/utils'
-import ExpenseCategoryItem from '@/components/ExpenseCategoryItem'
+import { authContext } from '@/lib/store/auth-context';
+import { currencyFormatter, dateFormatter } from '@/lib/utils';
+import ExpenseCategoryItem from '@/components/ExpenseCategoryItem';
 import IncomeModal from '@/components/modals/IncomeModal';
 import ExpenseModal from "@/components/modals/ExpenseModal";
+import SignIn from '@/components/SignIn';
+
 
 // Charts
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
@@ -17,6 +20,7 @@ export default function Home() {
 
   const [balance, setBalance] = useState(0)
   const { expenses, income } = useContext(financeContext)
+  const { user, loading } = useContext(authContext)
 
   useEffect(() => {
     const newBalance =
@@ -29,6 +33,17 @@ export default function Home() {
     setBalance(newBalance)
   }, [expenses, income])
 
+  if (loading) {
+    return(
+      <div className="spinner-container flex justify-center items-center h-screen">
+      <div className="loading-spinner">
+      </div>
+    </div>
+    )
+  }
+  if (!user) {
+    return <SignIn />
+  }
 
   return (
     <>
