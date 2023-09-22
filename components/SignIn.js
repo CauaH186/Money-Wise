@@ -45,53 +45,50 @@ function SignIn() {
 
 
 
-                <form>
-
-                    <div className="Login flex justify-between px-4 py-4">
-                        <input
-                            placeholder="Digite seu Email"
-                            type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                        <input
-                            placeholder="Digite sua Senha"
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
-                        <button className='btn btn-primary w-28' onClick={() => signInWithEmailAndPassword(email, password)}>
-                            Entrar
-                        </button>
-                    </div>
-                </form>
 
 
-                <form>
+                <div className="Login flex justify-between px-4 py-4">
+                    <input
+                        placeholder="Digite seu Email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <input
+                        placeholder="Digite sua Senha"
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    <button className='btn btn-primary w-28' onClick={() => signInWithEmailAndPassword(email, password)}>
+                        Entrar
+                    </button>
+                </div>
 
-                    <div className="Register flex justify-between px-4 py-4">
-                        <input
 
-                            placeholder="Digite seu Email"
-                            type="email"
-                            value={emailRegister}
-                            onChange={(e) => setEmailRegister(e.target.value)}
-                            required
-                        />
-                        <input
-                            placeholder="Digite sua Senha"
-                            type="password"
-                            value={passwordRegister}
-                            onChange={(e) => setPasswordRegister(e.target.value)}
-                            required
-                        />
-                        <button className='btn btn-primary w-28' onClick={() => createUserWithEmailAndPassword(emailRegister, passwordRegister)}>
-                            Registrar
-                        </button>
-                    </div>
-                </form>
+                <div className="Register flex justify-between px-4 py-4">
+                    <input
+
+                        placeholder="Digite seu Email"
+                        type="email"
+                        value={emailRegister}
+                        onChange={(e) => setEmailRegister(e.target.value)}
+                        required
+                    />
+                    <input
+                        placeholder="Digite sua Senha"
+                        type="password"
+                        value={passwordRegister}
+                        onChange={(e) => setPasswordRegister(e.target.value)}
+                        required
+                    />
+                    <button className='btn btn-primary w-28' onClick={() => createUserWithEmailAndPassword(emailRegister, passwordRegister)}>
+                        Registrar
+                    </button>
+                </div>
+
 
 
                 <div className="Google-Login px-4 py-4">
