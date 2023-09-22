@@ -36,7 +36,15 @@ function SignIn() {
     if (error) {
         return (
           <div>
-            <p>Error: {error.message}</p>
+            <p>Error: {error.code}</p>
+          </div>
+        );
+      }
+      
+      if (errorRegister) {
+        return (
+          <div>
+            <p>Error: {errorRegister.code}</p>
           </div>
         );
       }
