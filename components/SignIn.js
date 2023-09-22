@@ -1,3 +1,4 @@
+"use client"
 import React, { useContext, useState } from "react";
 
 import { authContext } from "@/lib/store/auth-context";
@@ -29,6 +30,17 @@ function SignIn() {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [showRegister, setShowRegister] = useState(false);
+    const [showLogin, setShowLogin] = useState(true);
+
+    if (error) {
+        return (
+          <div>
+            <p>Error: {error.message}</p>
+          </div>
+        );
+      }
+
 
 
     return (
@@ -43,10 +55,7 @@ function SignIn() {
                 <h3 className="text-2xl text-center mt-3">Entre para Continuar</h3>
 
 
-
-
-
-
+                {showLogin &&(
                 <div className="Login flex flex-col gap-4 justify-between px-4 py-4">
                     <input
                         placeholder="Digite seu Email"
@@ -65,12 +74,13 @@ function SignIn() {
                     <button className='btn btn-primary w-28' onClick={() => signInWithEmailAndPassword(email, password)}>
                         Entrar
                     </button>
+                    <button onClick={() => {setShowRegister(true), setShowLogin(false)}} className="text-lime-400 flex justify-end">Não Possui uma Conta? Crie Agora</button>
                 </div>
+                )}
 
-
+                {showRegister &&(
                 <div className="Register flex flex-col gap-4 justify-between px-4 py-4">
                     <input
-
                         placeholder="Digite seu Email"
                         type="email"
                         value={emailRegister}
@@ -87,8 +97,11 @@ function SignIn() {
                     <button  className='btn btn-primary w-28' onClick={() => createUserWithEmailAndPassword(emailRegister, passwordRegister)}>
                         Registrar
                     </button>
-                </div>
 
+                    <button onClick={() => {setShowLogin(true), setShowRegister(false)}} className="text-lime-400 flex justify-end">Possui uma Conta? Entre com ela</button>
+
+                </div>
+                )}
 
 
                 <div className="Google-Login px-4 pb-4">
