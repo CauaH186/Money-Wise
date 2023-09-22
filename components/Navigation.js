@@ -47,7 +47,9 @@ function Nav() {
 
           <nav className="flex items-center gap-4">
             <div>
+            <a href="#stats">
               <ImStatsBars className="text-2xl" />
+            </a>
             </div>
 
             <div>

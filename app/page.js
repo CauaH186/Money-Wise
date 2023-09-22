@@ -34,11 +34,11 @@ export default function Home() {
   }, [expenses, income])
 
   if (loading) {
-    return(
+    return (
       <div className="spinner-container flex justify-center items-center h-screen">
-      <div className="loading-spinner">
+        <div className="loading-spinner">
+        </div>
       </div>
-    </div>
     )
   }
   if (!user) {
@@ -84,6 +84,7 @@ export default function Home() {
 
         {/* Chart Section */}
         <section className='py-6'>
+          <a id='stats'></a>
           <h3 className='text-3xl'>Estatiscas</h3>
           <div className='w-3/4
            mx-auto'>
