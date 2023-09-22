@@ -34,9 +34,9 @@ function SignIn() {
     return (
         <main className="container max-w-2xl px6 mx-auto">
 
-            <div className="flex flex-col overflow-hidden shadow-md shadow-slate-500 bg-slate-800 rounded-3xl">
+            <div className="flex flex-col overflow-hidden shadow-md shadow-slate-500 bg-slate-800 rounded-3xl 10">
                 <div className="">
-                    <h1 className="mb-6 text-6xl font-bold text-center pt-5">Seja Bem Vindo</h1>
+                    <h1 className="mb-6 text-6xl font-bold text-center pt-5">Seja Bem Vindo</h1> 
                     <img className="object-cover w-full h-full" src="https://images.pexels.com/photos/3483098/pexels-photo-3483098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
                 </div>
 
@@ -47,7 +47,7 @@ function SignIn() {
 
 
 
-                <div className="Login flex justify-between px-4 py-4">
+                <div className="Login flex flex-col gap-4 justify-between px-4 py-4">
                     <input
                         placeholder="Digite seu Email"
                         type="email"
@@ -68,7 +68,7 @@ function SignIn() {
                 </div>
 
 
-                <div className="Register flex justify-between px-4 py-4">
+                <div className="Register flex flex-col gap-4 justify-between px-4 py-4">
                     <input
 
                         placeholder="Digite seu Email"
@@ -84,14 +84,14 @@ function SignIn() {
                         onChange={(e) => setPasswordRegister(e.target.value)}
                         required
                     />
-                    <button className='btn btn-primary w-28' onClick={() => createUserWithEmailAndPassword(emailRegister, passwordRegister)}>
+                    <button  className='btn btn-primary w-28' onClick={() => createUserWithEmailAndPassword(emailRegister, passwordRegister)}>
                         Registrar
                     </button>
                 </div>
 
 
 
-                <div className="Google-Login px-4 py-4">
+                <div className="Google-Login px-4 pb-4">
 
                     <button onClick={googleLoginHandler}
                         className="flex items-center gap-2 p-3 mx-auto mt-5 font-medium text-white align-middle bg-gray-700 rounded-lg">
