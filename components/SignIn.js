@@ -54,7 +54,7 @@ function SignIn() {
 
             <div className="flex flex-col overflow-hidden shadow-md shadow-slate-500 bg-slate-800 rounded-3xl 10">
                 <div className="">
-                    <h1 className="mb-6 text-6xl font-bold text-center pt-5">Seja Bem Vindo</h1>
+                    <h1 className="mb-6 w-fit font-bold text-center pt-5">Seja Bem Vindo</h1>
                     <img className="object-cover w-full h-full" src="https://images.pexels.com/photos/3483098/pexels-photo-3483098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
                 </div>
 
